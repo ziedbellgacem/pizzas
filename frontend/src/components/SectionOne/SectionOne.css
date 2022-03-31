@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Palette+Mosaic&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
+.homeTitle {
+  font-family: "Palette Mosaic", cursive;
+  text-transform: uppercase;
+  font-size: 8rem;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0;
+  min-height: calc(100vh - 16px);
+  background: white;
+  position: relative;
+  background-image: url("https://eat.sakuwha.com/wp-content/uploads/2020/12/saveurs-de-pizza-fond-d-ecran-3554x1999-43743_53-scaled.jpg");
+  color: #000;
+}
+
+.homeTitle:before {
+  content: attr(data-text);
+  position: absolute;
+  background: linear-gradient(
+    #f70000,
+    #f89200,
+    #f8f501,
+    #038f00,
+    #0168f8,
+    #a200f7
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 100% 90%;
+  line-height: 0.9;
+  clip-path: ellipse(120px 120px at -2.54% -9.25%);
+  animation: swing 5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes swing {
+  0% {
+    -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%);
+    clip-path: ellipse(120px 120px at -2.54% -9.25%);
+  }
+  50% {
+    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);
+    clip-path: ellipse(120px 120px at 49.66% 64.36%);
+  }
+  100% {
+    -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%);
+    clip-path: ellipse(120px 120px at 102.62% -1.61%);
+  }
+}
